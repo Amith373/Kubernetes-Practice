@@ -1,0 +1,38 @@
+# pod-labels.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod
+  labels:
+    app: myapp-frontend
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod
+  labels:
+    app: myapp-backend
+spec:
+  containers:
+    - name: redis
+      image: redis
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: database-pod
+  labels:
+    app: myapp-database
+spec:
+  containers:
+    - name: mysql
+      image: mysql
+
